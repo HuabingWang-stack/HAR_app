@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/coordinatorLayout"
+    tools:context=".MainActivity"
+    android:background="@drawable/gradient"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_1"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/roundviewreverse">
+
+            <TextView
+                android:id="@+id/account"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_marginLeft="30dp"
+                android:transitionName="account" />
+
+            <TextView
+                android:id="@+id/home"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_centerHorizontal="true"
+                android:drawableRight="@mipmap/iot1"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="PdIot"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp" />
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/live1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_1"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="40dp"
+            android:text="Watch Live Processing"
+            android:textColor="#000000"
+            android:drawableLeft="@mipmap/circle"
+            android:drawablePadding="5dp"
+            android:textSize="25sp" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/live1"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="#6C8AC9"></View>
+
+
+        <Button
+            android:id="@+id/live_button"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/view1"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="80dp"
+            android:background="@drawable/btn_1"
+            android:drawableLeft="@mipmap/l18"
+            android:paddingLeft="10dp"
+            android:text="18 Class Model"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/ble_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rl_1" />
+
+        <Button
+            android:id="@+id/live_button5"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/live_button"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="80dp"
+            android:background="@drawable/btn_1"
+            android:drawableLeft="@mipmap/l5"
+            android:paddingLeft="10dp"
+            android:text="5 Class Model"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/ble_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rl_1" />
+
+        <TextView
+            android:id="@+id/live2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/live_button5"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="40dp"
+            android:drawableLeft="@mipmap/circle"
+            android:drawablePadding="5dp"
+            android:text="Connecting"
+            android:textColor="#000000"
+            android:textSize="25sp" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/live2"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="#6C8AC9"></View>
+
+
+        <Button
+            android:id="@+id/ble_button"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@id/view2"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="80dp"
+            android:background="@drawable/btn_green"
+            android:drawableLeft="@mipmap/blue"
+            android:paddingLeft="10dp"
+            android:text="Connect\nRespeck"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/live_button" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:text="Version 2.0"
+        android:textAllCaps="false"
+        android:layout_marginRight="10dp"
+        android:textSize="20sp"
+        android:textColor="#6C8AC9">
+
+    </TextView>
+
+
+
+</RelativeLayout>

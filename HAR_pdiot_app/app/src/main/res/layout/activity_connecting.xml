@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".bluetooth.ConnectingActivity">
+
+
+
+    <RelativeLayout
+        android:id="@+id/rl_1"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/roundviewreverse"
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:id="@+id/account"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:layout_marginLeft="30dp"
+            android:transitionName="account" />
+
+        <TextView
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="Connecting"
+            android:drawableRight="@mipmap/connect"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/live1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_1"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@mipmap/circle"
+        android:drawablePadding="5dp"
+        android:text="Respeck ID"
+        android:textColor="#000000"
+        android:textSize="25sp" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/live1"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="#6C8AC9"></View>
+
+    <TextView
+        android:id="@+id/t1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view1"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:text="If your phone supports NFC, tap it against the white surface of the Respeck to obtain the ID.
+        \n\nYou can also find the ID on the Respeck label, or scan the Respeck QR code by pressing the Scan QR button."
+        android:textColor="#6C8AC9"
+        android:textSize="17sp" />
+
+    <EditText
+        android:id="@+id/respeck_code"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/t1"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="80dp"
+        android:background="@drawable/btn_white"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Respeck ID"
+        android:inputType="textPersonName"
+        android:paddingLeft="5dp"
+        android:textColor="#6C8AC9"
+        android:textColorHint="@color/grey" />
+
+    <Button
+        android:id="@+id/scan_respeck"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/respeck_code"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="80dp"
+        android:background="@drawable/btn_green"
+        android:drawableLeft="@mipmap/scan"
+        android:paddingLeft="15dp"
+        android:text="Scan QR"
+
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:id="@+id/live2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scan_respeck"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
+        android:drawableLeft="@mipmap/circle"
+        android:drawablePadding="5dp"
+        android:text="Pair Sensor"
+        android:textColor="#000000"
+        android:textSize="25sp" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/live2"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="#6C8AC9"></View>
+
+
+    <Button
+        android:id="@+id/connect_sensors_button"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/view2"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="80dp"
+        android:layout_weight="1"
+        android:background="@drawable/btn_1"
+        android:drawableLeft="@mipmap/conn"
+        android:paddingLeft="10dp"
+        android:text="Pair Sensors"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/restart_service_button"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/connect_sensors_button"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="80dp"
+        android:layout_weight="1"
+        android:drawableLeft="@mipmap/reconn"
+        android:paddingLeft="10dp"
+        android:background="@drawable/btn_red"
+        android:text="Restart connection"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+
+
+</RelativeLayout>

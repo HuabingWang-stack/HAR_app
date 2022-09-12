@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".live.LiveDataActivity"
+    android:background="@drawable/gradient"
+    >
+    <RelativeLayout
+        android:id="@+id/rl_1"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/roundviewreverse">
+
+        <TextView
+            android:id="@+id/account"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:layout_marginLeft="30dp"
+            android:transitionName="account" />
+
+        <TextView
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:layout_centerHorizontal="true"
+            android:drawableRight="@mipmap/watch"
+            android:gravity="center"
+            android:text="Watch Live Processing"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp" />
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/live1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_1"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@mipmap/circle"
+        android:drawablePadding="5dp"
+        android:text="Respeck Live Data"
+        android:textColor="#000000"
+        android:textSize="25sp" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/live1"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="#6C8AC9"></View>
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/respeck_chart"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/live1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/btn_white"
+        android:padding="20dp" />
+
+    <TextView
+        android:id="@+id/live2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/respeck_chart"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@mipmap/circle"
+        android:drawablePadding="5dp"
+        android:text="Predictions &amp; Probability"
+        android:textColor="#000000"
+        android:textSize="25sp" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/live2"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="#6C8AC9"></View>
+
+    <RelativeLayout
+        android:id="@+id/l1"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/live2"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_red">
+
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/detect"></ImageView>
+
+        <TextView
+            android:id="@+id/output1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/image1"
+            android:gravity="center"
+            android:paddingRight="15dp"
+            android:text="Waiting For Action Detected"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"></TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/l2"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:background="@drawable/btn_1"
+        android:layout_below="@+id/l1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp">
+
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/detect"></ImageView>
+
+        <TextView
+            android:id="@+id/output2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/image2"
+            android:gravity="center"
+            android:paddingRight="15dp"
+            android:text="Waiting For Action Detected"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"></TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/l3"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:background="@drawable/btn_green"
+        android:layout_below="@+id/l2"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp">
+
+        <ImageView
+            android:id="@+id/image3"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/detect"></ImageView>
+        <TextView
+            android:id="@+id/output3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/image3"
+            android:gravity="center"
+            android:paddingRight="15dp"
+            android:text="Waiting For Action Detected"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp">
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/l4"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:background="@drawable/btn_1"
+        android:layout_below="@+id/l3"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp">
+        <ImageView
+            android:id="@+id/image4"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/detect">
+        </ImageView>
+        <TextView
+            android:id="@+id/output4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/image4"
+            android:gravity="center"
+            android:paddingRight="15dp"
+            android:text="Waiting For Action Detected"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp">
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/l5"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:background="@drawable/btn_green"
+        android:layout_below="@+id/l4"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp">
+        <ImageView
+            android:id="@+id/image5"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/detect">
+        </ImageView>
+        <TextView
+            android:id="@+id/output5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/image5"
+            android:gravity="center"
+            android:paddingRight="15dp"
+            android:text="Waiting For Action Detected"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp">
+        </TextView>
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/t1"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_below="@id/live2"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@id/l1"
+        android:background="@drawable/btn_red"
+        android:gravity="center"
+        android:text="NaN"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"></TextView>
+
+    <TextView
+        android:id="@+id/t2"
+        android:layout_width="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/t1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/l1"
+        android:background="@drawable/btn_1"
+        android:gravity="center"
+        android:text="NaN"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"></TextView>
+
+    <TextView
+        android:id="@+id/t3"
+        android:layout_width="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/t2"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/l1"
+        android:background="@drawable/btn_green"
+        android:gravity="center"
+        android:text="NaN"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"></TextView>
+
+    <TextView
+        android:id="@+id/t4"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_below="@id/t3"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@id/l1"
+        android:background="@drawable/btn_1"
+        android:gravity="center"
+        android:text="NaN"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"></TextView>
+
+    <TextView
+        android:id="@+id/t5"
+        android:layout_width="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/t4"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/l1"
+        android:background="@drawable/btn_green"
+        android:gravity="center"
+        android:text="NaN"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"></TextView>
+
+<!--    <TextView-->
+<!--        android:id="@+id/output"-->
+<!--        android:layout_width="250dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/respeck_chart"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:drawableLeft="@mipmap/detect"-->
+<!--        android:gravity="center"-->
+<!--        android:paddingLeft="10dp"-->
+<!--        android:paddingTop="8dp"-->
+<!--        android:paddingBottom="8dp"-->
+<!--        android:text="Waiting For Action Detected"-->
+<!--        android:textAllCaps="false"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        android:textSize="20sp"></TextView>-->
+
+
+</RelativeLayout>
